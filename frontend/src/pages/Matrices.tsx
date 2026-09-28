@@ -20,7 +20,7 @@ import {
 
 export const Matrices: React.FC = () => {
   const [matrices, setMatrices] = useState(mockMatrices);
-  const [selectedMatrixId, setSelectedMatrixId] = useState<number | 'ALL'>('ALL');
+  const [selectedMatrixId, setSelectedMatrixId] = useState<string | 'ALL'>('ALL');
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
 
@@ -77,7 +77,7 @@ export const Matrices: React.FC = () => {
       values: newValues
     };
 
-    setMatrices([...matrices, created]);
+    setMatrices([...matrices, created as any]);
     setIsCreateModalOpen(false);
     setNewMatrixName('');
     triggerToast(`Matriz "${created.name}" creada exitosamente`);

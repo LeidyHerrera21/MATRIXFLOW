@@ -8,13 +8,6 @@ import {
   Bell,
   Save,
   CheckCircle2,
-  Globe,
-  DollarSign,
-  Key,
-  Database,
-  Mail,
-  Smartphone,
-  Lock
 } from 'lucide-react';
 
 export const Settings: React.FC = () => {
